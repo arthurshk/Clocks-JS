@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+   }
+   body{
+       background-color: #839b97;
+       height: 100%;
+   }
+   .clock{
+       position:relative;
+       height: 200px;
+       width: 200px;
+       background-color: #fff;
+       border-radius: 100%;
+       border: 10px solid #34626c;
+   
+       bottom:0;
+       margin: auto;
+   }
+   .clock .center{
+       height: 6px;
+       width: 6px;
+       background-color: #262626;
+       border-radius: 100%;
+       position:relative;
+       transform: translate(0, 1500%);
+     
+       margin: auto;
+   }
+   .clock .hour{
+       width: 3px;
+       height: 100%;
+       position: absolute;
+       left: 0;
+       right: 0;
+       margin: auto;
+       animation: time 12s infinite linear;
+   }
+   .clock .hour:before{
+       content:"";
+       height: 60px;
+       width: 3px;
+       background-color: #262626;
+       position: absolute;
+       top:30px;
+   }
+   .clock .minute{
+       width: 2px;
+       height: 100%;
+       position: absolute;
+       left: 0;
+       right: 0;
+
+       margin: auto;
+       animation: time 1s infinite linear;
+   }
+   .clock .minute:before{
+       position:absolute;
+       content: "";
+       background-color: #fd1111;
+       height: 45px;
+       width: 2px; 
+       top: 45px;
+   }
+   @keyframes time{
+       to{
+           transform: rotate(360deg);
+       }
+   }
